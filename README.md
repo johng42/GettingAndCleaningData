@@ -1,4 +1,4 @@
-Getting And Cleaning Data Course Project
+Codebook for Getting And Cleaning Data Course Project
 
 How the code works:
 This source file takes data from this web site: 
