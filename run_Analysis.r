@@ -34,9 +34,9 @@ colnames(trainy)<-"EXERCISE"
 colnames(trainx)<-feature_names
 
 #concatenate the training and test sets
-testbound<-cbind(testsub, testy, testx)
-trainbound<-cbind(trainsub, trainy, trainx)
-data<-rbind(testbound, trainbound)
+testbounddata<-cbind(testsub, testy, testx)
+trainbounddata<-cbind(trainsub, trainy, trainx)
+data<-rbind(testbounddata, trainbounddata)
 
 #get the columns for standard dev and mean - there are probably easier ways to do this
 dataset1<-data[,c(1,2 ,grep(".*-std.*",colnames(data)), grep(".*-Std.*", colnames(data)),grep(".*-Mean.*", colnames(data)), grep(".*-mean.*", colnames(data)))]
@@ -48,9 +48,6 @@ dataset1$EXERCISE[dataset1$EXERCISE == 3] <- "WALKING_DOWNSTAIRS"
 dataset1$EXERCISE[dataset1$EXERCISE == 4] <- "SITTING"
 dataset1$EXERCISE[dataset1$EXERCISE == 5] <- "STANDING"
 dataset1$EXERCISE[dataset1$EXERCISE == 6] <- "LAYING"
-
-names(dataset1)<-sub("f", "freq", names(dataset1))
-names(dataset1)<-sub("t", "time", names(dataset1))
 
 #write the tidy dataset in CSV format, not needed for the class
 #write.table(dataset1, "InitialDataSet.csv", row.names=FALSE, sep=',')
