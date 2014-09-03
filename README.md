@@ -19,5 +19,3 @@ The code reads the text file data for the test and training sets.  It merges the
 The reshape2 library is used for melting and dcasting the data.
 Hadley Wickham (2007). Reshaping Data with the reshape Package. Journal of Statistical Software, 21(12), 1-20. URL http://www.jstatsoft.org/v21/i12/. 
 
-
-
