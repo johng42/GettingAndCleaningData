@@ -1,29 +1,29 @@
 Codebook for Getting And Cleaning Data Course Project
 
 How the code works:
-This source file takes data from this web site: 
+This code takes data from this web site: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-and processes it into a tidy data set as defined by John Hopkins Getting and Cleaning Data class:
-https://class.coursera.org/getdata-007
-The full data set used was downloaded on 9/3/2014 from ...
+It then processes it into a tidy data set as defined by John Hopkins Getting and Cleaning Data class:
+https://class.coursera.org/getdata-008
+The full data set usedfor writing this particular assignment was downloaded on 9/3/2014 from ...
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-and may have changed by the time you read this.
+and may have changed by the time you read this.  (I had taken a previous class but did not get credit for the initial upload to githib so any references you see to class "getdata-007" should be changed to "getdata-008").
 
 Machine information: 
 Windows 8.1
 
-R Version 3.1.0 "Spring Dance"
+R Version 3.1.10 "Sock it to Me"
 
-32 bit
+64 bit
 
-The code reads the text file data for the test and training sets.  It merges the two sets and sets appropriate column names.  Per class notes, a "tidy" data file is created with standard deviation and mean for each activity and participant in the study.
+The code reads the text file data for the test and training sets.  It merges the two sets and sets the expected column names.  A tidy data file is created with standard deviation and mean for each activity and participant in the study.
 
 Variable names:
 The training and test sets for x and y are stored in "trainx", "testy", etc...  The subjects are stored in "testsub" and "trainsub".
 
-The 561 features are stored in "features".
+The 561 features used this in data set are stored in "features".
 
-The assignment calls for the test and train data sets to be merged.  This concatenation is done with "testbounddata" and "trainbounddata" and the combined data is stored in a simply named "data" variable.
+The assignment calls for the test and train data sets to be merged.  This concatenation is done with "testbounddata" and "trainbounddata" and the combined data is stored in the "data" variable.
 
 The GREP command to extract the columns needed for mean and standard deviation is a bit complicated.  The command is this:
 
